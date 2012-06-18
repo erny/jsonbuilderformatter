@@ -28,31 +28,31 @@ Build and install
 -----------------
 1. Build the JAR with maven.
 
-    mvn package
+       mvn package
 
 2. Install
 
    a. Copy the JAR to the WSO2 dropins folder
 
-    cp target/jsonbuilderformatter-1.0.0.jar <WSO2 root dir>/repository/components/dropins
+          cp target/jsonbuilderformatter-1.0.0.jar <WSO2 root dir>/repository/components/dropins
 
    b. Edit the axis2.xml and comment the existing JSON builder & formatter and 
       add the JSON builder and formatter
 
-    vim <WSO2 root dir>/repository/conf/axis2.xml
+          vim <WSO2 root dir>/repository/conf/axis2.xml
 
-<!--
-      <messageBuilder contentType="application/json"
-                        class="org.apache.axis2.json.JSONOMBuilder"/>
--->
-      <messageFormatter contentType="application/json"
+          <!--
+          <messageBuilder contentType="application/json"
+            class="org.apache.axis2.json.JSONOMBuilder"/>
+          -->
+          <messageFormatter contentType="application/json"
             class="es.tangrambpm.wso2esb.JSONMessageFormatter"/>
 
-<!--
-      <messageBuilder contentType="application/json"
+          <!--
+          <messageBuilder contentType="application/json"
                         class="org.apache.axis2.json.JSONOMBuilder"/>
--->
-      <messageBuilder contentType="application/json"
+          -->
+          <messageBuilder contentType="application/json"
             class="es.tangrambpm.wso2esb.JSONOMBuilder"/>
  
 3. Restart the ESB.
