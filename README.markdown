@@ -34,12 +34,12 @@ Build and install
 
    a. Copy the JAR to the WSO2 dropins folder
 
-       cp target/jsonbuilderformatter-1.0.0.jar <WSO2 root dir>/repository/components/dropins
+    cp target/jsonbuilderformatter-1.0.0.jar <WSO2 root dir>/repository/components/dropins
 
    b. Edit the axis2.xml and comment the existing JSON builder & formatter and 
       add the JSON builder and formatter
 
-      vim <WSO2 root dir>/repository/conf/axis2.xml
+    vim <WSO2 root dir>/repository/conf/axis2.xml
 
 <!--
       <messageBuilder contentType="application/json"
