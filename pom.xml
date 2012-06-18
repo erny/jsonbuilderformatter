@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>es.tangrambpm.wso2esb</groupId>
+  <artifactId>jsonbuilderformatter</artifactId>
+  <version>1.0.0</version>
+  <packaging>bundle</packaging>
+  <name>TangramBPM JSON support</name>
+  <description></description>
+  <url>www.tangrambpm.es</url>
+  <build>
+      <plugins>
+          <plugin>
+              <groupId>org.apache.felix</groupId>
+              <artifactId>maven-bundle-plugin</artifactId>
+              <version>1.4.0</version>
+              <extensions>true</extensions>
+              <configuration>
+                  <instructions>
+                      <Bundle-SymbolicName>${pom.groupId}.${pom.artifactId}</Bundle-SymbolicName>
+                      <Bundle-Name>${pom.name}</Bundle-Name>
+                      <Bundle-Version>${pom.version}</Bundle-Version>
+                      <Export-Package>es.tangrambpm.wso2esb</Export-Package>
+                  </instructions>
+              </configuration>
+          </plugin>
+      </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+        <groupId>org.apache.axis2</groupId>
+        <artifactId>axis2-json</artifactId>
+        <version>1.6.1</version>
+        <scope>provided</scope>
+    </dependency>
+    <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>2.0</version>
+        <scope>provided</scope>
+    </dependency>
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.10</version>
+        <scope>test</scope>
+    </dependency>
+            
+  </dependencies>
+</project>
